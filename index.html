@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validando o carregamento de uma imagem</title>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$(function(){
+			$('img').error(function(){
+				var imagem = $(this).attr('src');
+				alert('A imagem '+imagem+' não foi localizada.');
+				$('img').attr('src','img/nao-disponivel.jpg');
+			});			
+		});
+	</script>
+</head>
+<body>
+	<img src="img/nao-disponivel.jpg">
+</body>
+</html>
