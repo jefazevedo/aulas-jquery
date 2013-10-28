@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Usando o evento do browser - resize</title>	
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$(window).resize(function(){			
+			var largura = $(window).width();
+			if (largura <= 300){
+				$('body').css('background','red');
+				$('body').append("<div>O tamanho da largura é: "+largura+"</div>");			
+			}
+		});
+	</script>
+</head>
+<body>
+
+</body>
+</html>
