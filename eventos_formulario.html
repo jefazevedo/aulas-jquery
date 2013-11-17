@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Eventos do Formulário</title>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$(function(){
+			$('input[name=codigo]').focus().focusin(function(){
+				if($(this).val() != ""){
+					$('h1').html('O valor do input=codigo: '+$(this).val());		
+				}				
+			}).blur(function(){				
+				if($(this).val() == ""){
+					$(this).val("Digite seu código");
+				}
+			}).change(function(){
+				alert('Mudou');
+			}).select(function(){
+				alert($(this).val());
+			});			
+		});
+	</script>
+</head>
+<body>
+	<h1>Olá</h1>
+	<label for="codigo">Seu código:</label>
+	<input type="text" name="codigo">
+
+	<label for="nome">Seu nome:</label>
+	<input type="text" name="nome">	
+</body>
+</html>
